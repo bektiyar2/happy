@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>С Днем Рождения, Жанара!</title>
     <style>
-        /* Общие стили */
         body {
             margin: 0;
             padding: 0;
@@ -33,17 +32,28 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0;
-            animation: fadeInOut 15s infinite;
+            opacity: 0; /* Изображение скрыто по умолчанию */
+            animation: fadeInOut 36s infinite; /* Анимация для всех */
         }
 
+        /* Задержка для каждого изображения */
         .collage img:nth-child(1) { animation-delay: 0s; }
-        .collage img:nth-child(2) { animation-delay: 5s; }
-        .collage img:nth-child(3) { animation-delay: 10s; }
+        .collage img:nth-child(2) { animation-delay: 4s; }
+        .collage img:nth-child(3) { animation-delay: 8s; }
+        .collage img:nth-child(4) { animation-delay: 12s; }
+        .collage img:nth-child(5) { animation-delay: 16s; }
+        .collage img:nth-child(6) { animation-delay: 20s; }
+        .collage img:nth-child(7) { animation-delay: 24s; }
+        .collage img:nth-child(8) { animation-delay: 28s; }
+        .collage img:nth-child(9) { animation-delay: 32s; }
 
+        /* Анимация появления и исчезновения */
         @keyframes fadeInOut {
-            0%, 100% { opacity: 0; }
-            40%, 60% { opacity: 1; }
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            30% { opacity: 1; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
         }
 
         /* Конверт */
@@ -122,48 +132,6 @@
         .flower:nth-child(1) { top: -20px; left: 10px; }
         .flower:nth-child(2) { top: 30px; left: 90%; }
         .flower:nth-child(3) { top: 70%; left: 20%; }
-
-        /* Адаптация для планшетов */
-        @media (max-width: 768px) {
-            .envelope {
-                width: 280px;
-                height: 200px;
-            }
-
-            .content h1 {
-                font-size: 1.3rem;
-            }
-
-            .content p {
-                font-size: 1rem;
-            }
-
-            .flower {
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        /* Адаптация для телефонов */
-        @media (max-width: 480px) {
-            .envelope {
-                width: 220px;
-                height: 160px;
-            }
-
-            .content h1 {
-                font-size: 1rem;
-            }
-
-            .content p {
-                font-size: 0.9rem;
-            }
-
-            .flower {
-                width: 15px;
-                height: 15px;
-            }
-        }
     </style>
 </head>
 <body>
