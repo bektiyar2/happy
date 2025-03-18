@@ -32,11 +32,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0; /* Изображение скрыто по умолчанию */
-            animation: fadeInOut 36s infinite; /* Анимация для всех */
+            opacity: 0; /* Изображения скрыты по умолчанию */
+            animation: fadeInOut 36s infinite; /* Общая длительность анимации для всех изображений */
         }
 
-        /* Задержка для каждого изображения */
+        /* Используем разные задержки для каждого изображения */
         .collage img:nth-child(1) { animation-delay: 0s; }
         .collage img:nth-child(2) { animation-delay: 4s; }
         .collage img:nth-child(3) { animation-delay: 8s; }
@@ -47,16 +47,14 @@
         .collage img:nth-child(8) { animation-delay: 28s; }
         .collage img:nth-child(9) { animation-delay: 32s; }
 
-        /* Анимация появления и исчезновения */
+        /* Ключевые кадры для анимации появления и исчезновения */
         @keyframes fadeInOut {
-            0% { opacity: 0; }
-            10% { opacity: 1; }
-            30% { opacity: 1; }
-            40% { opacity: 0; }
-            100% { opacity: 0; }
+            0%, 100% { opacity: 0; } /* Исходное и конечное состояние: скрыто */
+            10%, 30% { opacity: 1; } /* В этих промежутках изображение полностью видно */
+            40% { opacity: 0; } /* Плавное исчезновение */
         }
 
-        /* Конверт */
+        /* Остальные элементы сайта */
         .envelope {
             position: absolute;
             width: 350px;
@@ -114,7 +112,6 @@
             margin-top: 15px;
         }
 
-        /* Цветочки */
         .flower {
             position: absolute;
             width: 30px;
